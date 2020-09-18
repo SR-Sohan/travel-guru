@@ -1,0 +1,35 @@
+.makeStyles-sectionDesktop-8 a{
+    text-decoration: none;
+    color: white;
+    margin: 0 25px;
+}
+.user-login span{
+    background: #F9A51A;
+    padding: 10px 25px;
+    border-radius: 5px;
+    color: black;
+    cursor: pointer;
+}
+.MuiAppBar-colorPrimary{
+    background-color: transparent !important;
+}
+.MuiPaper-elevation4{
+    box-shadow: none !important;
+}
+.img-box img {
+    filter: brightness(100);
+}
+img{
+    width: 100%;
+    height: 100%;
+}
+.img-box{
+    width: 200px;
+    height: 80px;
+}
+.loggedInUser-name{
+    margin: 0 20px;
+    color: #F9A51A;
+    font-weight: 500;
+    font-size: 18px;
+}

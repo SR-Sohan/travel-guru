@@ -1,0 +1,67 @@
+
+.login-area .makeStyles-sectionDesktop-8 a{
+    color: black;
+}
+.login-area .img-box img{
+    filter: brightness(1);
+}
+.login-area .makeStyles-inputRoot-6{
+    display: none;
+}
+.create-user{
+    width: 570px;
+    border: 2px solid gray;
+    margin: 40px auto;
+    padding: 30px 40px;
+    text-align: center;
+    border-radius: 5px;
+}
+.create-user input{
+    width: 462px;
+    height: 32px;
+    border: none;
+    outline: none;
+    margin-bottom: 25px;
+    border-bottom: 1px solid lightgray;
+    padding: 5px 15px;
+   
+
+}
+.create-user input[type="submit"]{
+    background-color: #F9A51A;
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 22px;
+    cursor: pointer;
+}
+.create-user span{
+    color: #fa9e0bf3;
+    cursor: pointer;
+    font-weight: 700;
+}
+img{
+    width: 100%;
+}
+.social{
+    width: 261px;
+    height: 51px;
+    display: flex;
+    padding: 0 10px;
+    align-items: center;
+    border: 1px solid gray;
+    border-radius: 25px;
+    margin: 10px auto;
+    cursor: pointer;
+    transition: .5s;
+}
+.social:hover{
+    color: white;
+    background: #F9A51A;
+}
+.social span{
+    margin-left: 25px;
+}
+.social img{
+    width: 31px;
+    height: 31px;
+}

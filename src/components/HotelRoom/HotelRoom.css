@@ -1,0 +1,19 @@
+.hotelroom-area .makeStyles-sectionDesktop-8 a{
+    color: black;
+}
+.hotelroom-area .img-box img{
+    filter: brightness(1);
+}
+.hotelroom-area .makeStyles-inputRoot-6{
+    display: none;
+}
+.hotelroom-content{
+    display: flex;
+    justify-content: space-between;
+    padding-top: 40px;
+    border-top: 2px solid gray;
+}
+.room-content{
+    margin-left: 0;
+    width: 45%;
+}

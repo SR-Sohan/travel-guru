@@ -1,0 +1,14 @@
+.show-place{
+    margin: 15px;
+    border-radius: 5px;
+    width: 230px;
+    height: 350px;
+    position: relative;
+}
+.place-name{
+    position: absolute;
+    left: 10%;
+    bottom: 5%;
+    color: white;
+    text-transform: uppercase;
+}

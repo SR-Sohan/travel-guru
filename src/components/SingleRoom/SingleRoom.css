@@ -1,0 +1,52 @@
+img{width:100%;}
+.single-room{
+    display: flex;
+    margin-bottom: 30px;
+    
+}
+.room-img img{
+    width: 270px;
+    height: 188px;
+}
+.room-details{
+    margin-left: 25px;
+}
+.room-details h3{
+    font-weight: 500;
+    font-size: 18px;
+    line-height: 26px;
+    color: #000000;
+}
+.room-details p{
+    font-size: 16px;
+    line-height: 20px;
+    color: #6A6A6A;
+    margin: 12px 0;
+}
+.price-area{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+.rating{
+    display: flex;
+    align-items: center;
+}
+.rating-icon img{
+    width: 20px;
+    height: 20px;
+    margin-right: 5px;
+}
+.rating,
+.price p{
+    font-weight: 500;
+    font-size: 18px;
+    line-height: 17px;
+    color: #000000;
+}
+.price span{
+    font-weight: 200;
+    font-size: 14px;
+    line-height: 17px;
+    color: #898989;
+}
