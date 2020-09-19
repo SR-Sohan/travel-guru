@@ -196,7 +196,7 @@ export default function Header() {
               <span>{ loggedInUser.name ? loggedInUser.name : ''}</span>
           </div>
           <div className="user-login"> 
-              {loggedInUser.email ? <span onClick={()=> setLoggedInUser({})}>Log out</span> : <span onClick={()=> history.push('/login')}>Login</span>}
+              {loggedInUser.email || loggedInUser.name ? <span onClick={()=> setLoggedInUser({})}>Log out</span> : <span onClick={()=> history.push('/login')}>Login</span>}
           </div>
         </Toolbar>
       </AppBar>

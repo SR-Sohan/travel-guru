@@ -30,35 +30,34 @@ export const handleGoogleSignIn = () =>{
   }
 
 // Facebook Handle Export
-
-// export const handleFbSignIn = () => {
-//     const fbProvider = new firebase.auth.FacebookAuthProvider();
-//     return firebase.auth().signInWithPopup(fbProvider)
-//     .then( res =>  {
-//         console.log(res);
-//         const {displayName,email} = res.user;
-//           const userInfo = {
-//             isSignIn: true,
-//             name: displayName,
-//             email: email,
-//             success: true
-//           }
-//           return userInfo
-//       })
-//       .catch(error => {
-//         console.log(error.message);
-//       });
-//   }
+export const handleFbSignIn = () => {
+    const fbProvider = new firebase.auth.FacebookAuthProvider();
+    return firebase.auth().signInWithPopup(fbProvider)
+    .then( res =>  {
+        console.log(res);
+        const {displayName,email} = res.user;
+          const userInfo = {
+            isSignIn: true,
+            name: displayName,
+            email: email,
+            success: true
+          }
+          return userInfo
+      })
+      .catch(error => {
+        console.log(error.message);
+      });
+  }
 
 // Create Account with email and password Export
 export const createUserWithEmailAndPassword = (email, password,firstName,lastName) => {
     return firebase.auth().createUserWithEmailAndPassword(email, password)
         .then(res => {
-            const newUserIfno = res.user;
+            let newUserIfno = res.user;
             newUserIfno.error = '';
             newUserIfno.success = true;
             return newUserIfno;
-            updateDisplayName(firstName,lastName);
+            updateUserName(firstName,lastName);
         })
         .catch(error => {
           let errorMessage = error.message;
@@ -104,11 +103,11 @@ export const handleSignOut = () =>{
 
     })
   }
-//Update User Name
-const updateDisplayName = (firstName ,lastName) => {
+
+// Update User Name
+const updateUserName = (firstName ,lastName) => {
     let user = firebase.auth().currentUser;
         let fullName = firstName + ' ' + lastName;
-        console.log(fullName);
       user.updateProfile({
         displayName: fullName
       }).then(function() {
@@ -117,3 +116,4 @@ const updateDisplayName = (firstName ,lastName) => {
         console.log(error.message);
       });
   }
+ 

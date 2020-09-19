@@ -78,13 +78,13 @@ const Login = () => {
         })
       };
 
-      // // FaceBook Sign In Function
-      // const fbSignIn = () => {
-      //   handleFbSignIn()
-      //   .then( res => {
-      //     handleResponse(res,true)
-      //   })
-      // };
+      // FaceBook Sign In Function
+      const fbSignIn = () => {
+        handleFbSignIn()
+        .then( res => {
+          handleResponse(res,true)
+        })
+      };
 
       // SignOut
       const signOut = () =>{
@@ -110,6 +110,7 @@ const Login = () => {
         createUserWithEmailAndPassword(user.email,user.password,user.firstName,user.lastName)
         .then(res => {
           handleResponse(res,false)
+          setNewUser(false)
         })
       };
 
@@ -134,15 +135,15 @@ const Login = () => {
                    <div className="create-user"> 
                     <h3>Create an account</h3>
                         <form onSubmit={handleFormSubmit}> 
-                                {newUser && <input onBlur={handleFiledValidation} type="text" name="firstName" placeholder="First Name" required/>}
+                                {newUser  && <input  onBlur={handleFiledValidation} type="text" name="firstName" placeholder="First Name" required/>}
                                 <br/> 
-                                { newUser && <input onBlur={handleFiledValidation} type="text"  name="lastName" placeholder="Last Name" required/>}
+                                { newUser  && <input onBlur={handleFiledValidation} type="text"  name="lastName" placeholder="Last Name" required/>}
                                 <br/>
                                 <input onBlur={handleFiledValidation} type="text" name="email" placeholder="User Name or Email" required />
                                 <br/>
                                 <input onBlur={handleFiledValidation} name="password" type="password" placeholder="Password" required/>
                                 <br/>
-                                {newUser && <input onBlur={handleFiledValidation} name="confirmpassword" type="password"  placeholder=" Confirm Password" required/>}
+                                {newUser  && <input onBlur={handleFiledValidation} name="confirmpassword" type="password"  placeholder=" Confirm Password" required/>}
                                 <br/> 
                                <input type="submit" value={newUser ?"Create an account":'Login'}/>
                                 <br/> 
@@ -154,7 +155,7 @@ const Login = () => {
                             <img src={require('../../images/Icon/google.png')} alt="" />
                             <span>Login with Google</span>
                        </div>
-                       <div className=" social facebokk-section"> 
+                       <div onClick={fbSignIn} className=" social facebokk-section"> 
                             <img src={require('../../images/Icon/fb.png')} alt="" />
                             <span>Login with FaceBook</span>
                        </div>
